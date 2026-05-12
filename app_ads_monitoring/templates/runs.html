@@ -1,0 +1,242 @@
+{% extends "base.html" %}
+
+{% block title %}Прогоны проверок — app-ads.txt Monitor{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h5 class="mb-0 fw-semibold">Прогоны проверок</h5>
+    {% if role == "analyst" %}
+    <form method="POST" action="{{ url_for('start_run') }}" id="startRunForm">
+        <button type="submit" class="btn btn-dark btn-sm px-3" id="startRunBtn">
+            Запустить проверку
+        </button>
+    </form>
+    {% endif %}
+</div>
+
+<div class="card border-0 shadow-sm mb-4">
+    <div class="card-body py-3">
+        <div class="row g-3 align-items-center">
+
+            <div class="col-md-6">
+                <form method="GET" action="{{ url_for('runs') }}" class="d-flex align-items-center gap-2">
+                    <label class="small text-muted fw-semibold text-uppercase mb-0" style="white-space: nowrap;">
+                        Дата запуска:
+                    </label>
+                    <div class="input-group input-group-sm" style="max-width: 200px;">
+                        <input type="text"
+                           class="form-control border-secondary text-center date-picker"
+                           name="date"
+                           value="{{ date_filter or '' }}"
+                           placeholder="Выберите дату"
+                           style="color: #495057; font-family: inherit;">
+                        <button class="btn btn-dark" type="button" onclick="this.form.submit()">
+                            Найти
+                        </button>
+                    </div>
+                    {% if date_filter %}
+                    <a href="{{ url_for('runs') }}"
+                       class="btn-close ms-1"
+                       aria-label="Сбросить"
+                       title="Сбросить фильтр">
+                    </a>
+                    {% endif %}
+                </form>
+            </div>
+
+
+            {% if role == "analyst" %}
+            <div class="col-md-6 text-end">
+                <button type="submit"
+                        form="deleteForm"
+                        class="btn btn-outline-danger btn-sm"
+                        onclick="return confirm('Вы уверены? Это действие нельзя отменить.')">
+                    Удалить выбранные
+                </button>
+            </div>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+
+{% if runs %}
+
+{% if not date_filter %}
+    {% set latest = runs[0] %}
+    {% if latest.summary %}
+    <div class="card border-0 shadow-sm mb-4"
+         style="border-left: 3px solid #212529 !important;">
+        <div class="card-body py-3">
+            <div class="row align-items-center">
+                <div class="col">
+                    <div class="small text-muted mb-1">Последний прогон — #{{ latest.run_id }}</div>
+                    <div class="d-flex gap-4">
+                        <div>
+                            <span class="fw-semibold">{{ latest.summary.total }}</span>
+                            <span class="text-muted small ms-1">доменов</span>
+                        </div>
+                        <div>
+                            <span class="fw-semibold text-success">{{ latest.summary.ok_count }}</span>
+                            <span class="text-muted small ms-1">OK</span>
+                        </div>
+                        <div>
+                            <span class="fw-semibold text-danger">{{ latest.summary.error_count }}</span>
+                            <span class="text-muted small ms-1">ERROR</span>
+                        </div>
+                        <div>
+                            <span class="fw-semibold text-info">
+                                {{ latest.summary.avg_match_rate }}%
+                            </span>
+                            <span class="text-muted small ms-1">avg match rate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <a href="{{ url_for('run_detail', run_id=latest.run_id) }}"
+                       class="btn btn-dark btn-sm">
+                        Открыть →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+{% endif %}
+
+<form method="POST" action="{{ url_for('delete_runs_route') }}" id="deleteForm">
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-0">
+            <table class="table table-hover mb-0">
+                <thead>
+                    <tr style="background: #f8f9fa;">
+                        {% if role == "analyst" %}
+                        <th class="ps-4" style="width: 40px;">
+                            <input class="form-check-input"
+                                   type="checkbox"
+                                   id="selectAll"
+                                   style="cursor: pointer;">
+                        </th>
+                        {% endif %}
+                        <th {% if role != "analyst" %}class="ps-4"{% endif %}>Run ID</th>
+                        <th>Дата запуска</th>
+                        <th>Дата завершения</th>
+                        <th>Длительность</th>
+                        <th>Доменов</th>
+                        <th>OK</th>
+                        <th>ERROR</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for run in runs %}
+                    <tr onclick="window.location='{{ url_for('run_detail', run_id=run.run_id) }}'"
+                        style="cursor: pointer;">
+
+                        {% if role == "analyst" %}
+                        <td class="ps-4 align-middle" onclick="event.stopPropagation();">
+                            <input class="form-check-input"
+                                   type="checkbox"
+                                   name="run_ids"
+                                   value="{{ run.run_id }}">
+                        </td>
+                        {% endif %}
+
+                        <td class="fw-semibold align-middle {% if role != "analyst" %}ps-4{% endif %}">
+                            # {{ run.run_id }}
+                        </td>
+                        <td class="align-middle">
+                            {{ run.started_at.strftime('%d.%m.%Y %H:%M:%S') }}
+                        </td>
+                        <td class="align-middle">
+                            {% if run.finished_at %}
+                                {{ run.finished_at.strftime('%H:%M:%S') }}
+                            {% else %}
+                                <span class="badge bg-warning text-dark">...</span>
+                            {% endif %}
+                        </td>
+                        <td class="text-muted align-middle">
+                            {% if run.duration_seconds is not none %}
+                                {{ run.duration_seconds }}с
+                            {% else %}
+                                -
+                            {% endif %}
+                        </td>
+                        <td class="align-middle">
+                            {% if run.summary %}
+                                {{ run.summary.total }}
+                            {% else %}—{% endif %}
+                        </td>
+                        <td class="align-middle">
+                            {% if run.summary %}
+                                <span class="text-success fw-semibold">{{ run.summary.ok_count }}</span>
+                            {% else %}—{% endif %}
+                        </td>
+                        <td class="align-middle">
+                            {% if run.summary and run.summary.error_count > 0 %}
+                                <span class="text-danger fw-semibold">{{ run.summary.error_count }}</span>
+                            {% elif run.summary %}
+                                <span class="text-success">0</span>
+                            {% else %}—{% endif %}
+                        </td>
+                        <td class="text-end pe-4 align-middle">
+                            <span class="text-muted small">→</span>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>
+
+{% else %}
+<div class="card border-0 shadow-sm mt-4">
+    <div class="card-body text-center py-5 text-muted">
+        <div class="fs-4 mb-2"></div>
+        <div>
+            {% if date_filter %}
+                За эту дату прогонов не найдено
+                <br>
+                <a href="{{ url_for('runs') }}" class="btn btn-outline-secondary btn-sm mt-2">Сбросить фильтр</a>
+            {% else %}
+                Прогонов пока нет
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<div id="loadingOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.85); z-index: 9999; flex-direction: column; align-items: center; justify-content: center;">
+    <div class="text-center">
+        <div class="spinner-border text-dark mb-3" role="status" style="width: 2rem; height: 2rem;"></div>
+        <div class="fw-semibold">Выполняется проверка...</div>
+        <div class="text-muted small mt-1">Это может занять несколько минут</div>
+    </div>
+</div>
+
+<script>
+    const form = document.getElementById('startRunForm');
+    if (form) {
+        form.addEventListener('submit', function() {
+            document.getElementById('loadingOverlay').style.display = 'flex';
+            const btn = document.getElementById('startRunBtn');
+            btn.disabled = true;
+            btn.textContent = 'Запускается...';
+        });
+    }
+</script>
+<script>
+    const selectAllDetails = document.getElementById('selectAll');
+    if (selectAllDetails) {
+        selectAllDetails.addEventListener('change', function() {
+            const checkboxes = document.getElementsByName('run_ids');
+            for (let checkbox of checkboxes) {
+                checkbox.checked = this.checked;
+            }
+        });
+    }
+</script>
+
+{% endblock %}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}app-ads.txt Monitor{% endblock %}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <style>
+        * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+        body { background-color: #f8f9fa; color: #212529; font-size: 0.9rem; }
+
+        .navbar-brand-text { font-weight: 700; letter-spacing: -0.5px; }
+        .navbar-brand-text span { font-weight: 300; color: #adb5bd; }
+
+        .table th { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+        .badge { font-weight: 500; }
+        .card { border-radius: 8px; }
+
+        .alert-dismissible .btn-close {
+            position: absolute; top: 50%; right: 1rem;
+            transform: translateY(-50%); padding: 0; margin: 0;
+        }
+        .alert-dismissible { position: relative; padding-right: 3rem; }
+
+        .btn-white { background: #fff; border: 1px solid transparent; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .btn-link-muted { color: #6c757d; text-decoration: none; }
+        .btn-link-muted:hover { color: #000; background: rgba(0,0,0,0.03); }
+    </style>
+</head>
+<body>
+
+{% if session.username %}
+<nav class="navbar bg-white border-bottom px-4 py-2 sticky-top shadow-sm">
+    <div class="d-flex align-items-center gap-4">
+        <a href="{{ url_for('runs') }}" class="text-decoration-none text-dark d-flex align-items-center gap-2">
+            <span class="navbar-brand-text fs-5">
+                app-ads.txt<span class="fw-light text-muted"> monitor</span>
+            </span>
+        </a>
+
+        <div class="d-flex gap-1 bg-light p-1 rounded-pill border">
+            <a href="{{ url_for('runs') }}"
+               class="btn btn-sm {% if request.endpoint in ['runs', 'run_detail', 'domain_detail'] %}btn-white text-dark fw-semibold{% else %}btn-link-muted{% endif %} rounded-pill px-3 py-1 border-0">
+               История
+            </a>
+            <a href="{{ url_for('monitoring') }}"
+               class="btn btn-sm {% if request.endpoint == 'monitoring' %}btn-white text-dark fw-semibold{% else %}btn-link-muted{% endif %} rounded-pill px-3 py-1 border-0">
+               Риски
+            </a>
+        </div>
+    </div>
+
+    <div class="d-flex align-items-center gap-3">
+        <span class="small text-muted">
+            {{ session.username }}
+            {% if session.role == 'analyst' %}
+                <span class="badge bg-dark ms-1">аналитик</span>
+            {% else %}
+                <span class="badge bg-secondary ms-1">менеджер</span>
+            {% endif %}
+        </span>
+
+        {% if session.role == 'analyst' %}
+        <a href="{{ url_for('reference_config') }}"
+           class="text-secondary text-decoration-none px-1"
+           title="Настройки эталона" style="font-size: 1.2rem; line-height: 1;">
+           ⚙
+        </a>
+        {% endif %}
+
+        <div class="vr mx-1"></div>
+
+        <a href="{{ url_for('logout') }}"
+           class="btn btn-outline-secondary btn-sm border-0">
+            Выйти
+        </a>
+    </div>
+</nav>
+{% endif %}
+
+<div class="container mt-4">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-info alert-dismissible fade show py-3 small d-flex align-items-center shadow-sm border-0 bg-white">
+                    <span class="fw-medium text-dark me-2">ℹ</span>
+                    <span>{{ message }}</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://npmcdn.com/flatpickr/dist/l10n/ru.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    flatpickr(".date-picker", {
+        "locale": "ru",
+        mode: "range",
+        dateFormat: "Y-m-d",
+        altInput: true,
+        altFormat: "d.m.Y",
+        allowInput: true,
+        conjunction: " — "
+    });
+</script>
+
+</body>
+</html>
