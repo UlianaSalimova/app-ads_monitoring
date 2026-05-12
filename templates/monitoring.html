@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}Мониторинг рисков — app-ads.txt Monitor{% endblock %}
+
+{% block content %}
+
+<h4 class="mb-4 fw-semibold">Мониторинг рисков</h4>
+
+{% if alerts %}
+<div class="row mb-4">
+    <div class="col-md-8">
+        <div class="alert alert-light border shadow-sm d-flex align-items-center">
+            <div class="fs-4 me-3"></div>
+            <div>
+                <strong>Внимание!</strong>
+                Отображаются только партнёры с текущими проблемами (Status != OK).
+                <br>
+                Список отсортирован по финансовому влиянию (Доход за 30 дней).
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-0">
+        <table class="table table-hover mb-0 align-middle">
+            <thead class="table-light text-muted small text-uppercase">
+                <tr>
+                    <th class="ps-4 py-3">Партнёр / Домен</th>
+                    <th>Длительность проблемы</th>
+                    <th>Статус</th>
+                    <th>Менеджер</th>
+                    <th>Доход (30d)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in alerts %}
+                <tr>
+                    <td class="ps-4">
+                        <div class="fw-bold text-dark">{{ item.partner or '—' }}</div>
+                        <div class="font-monospace small text-muted">{{ item.domain }}</div>
+                    </td>
+
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <span class="fs-5 me-2">
+                                {% if item.streak_count > 5 %}{% elif item.streak_count > 2 %}{% else %}{% endif %}
+                            </span>
+                            <div>
+                                <div class="fw-bold">{{ item.streak_count }} прогонов подряд</div>
+                                <div class="small text-muted">с {{ item.problem_since.strftime('%d.%m %H:%M') }}</div>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>
+                        {% if item.status == 'ERROR' %}
+                            <span class="badge bg-danger">ERROR</span>
+                        {% else %}
+                            <span class="badge bg-warning text-dark">{{ item.status }}</span>
+                        {% endif %}
+                        <div class="small text-muted mt-1">{{ item.last_match_rate }}% match</div>
+                    </td>
+
+                    <td>
+                        {{ item.manager or '—' }}
+                    </td>
+
+                    <td>
+                        {% if item.revenue > 0 %}
+                            <span class="fw-bold text-dark">{{ "{:,.0f}".format(item.revenue).replace(',', ' ') }} ₽</span>
+                        {% else %}
+                            <span class="text-muted small">0 ₽</span>
+                        {% endif %}
+                    </td>
+
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% else %}
+<div class="card border-0 shadow-sm text-center py-5">
+    <div class="fs-1"></div>
+    <div class="mt-3 fs-5 fw-semibold">Проблем не обнаружено</div>
+    <div class="text-muted">На данный момент у всех проверенных партнёров статус OK.</div>
+</div>
+{% endif %}
+
+{% endblock %}
