@@ -1,0 +1,1142 @@
+Loaded 528 reference lines
+Loaded 13 websites
+Created check run: 19
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] clipglider.com — ERROR (missing: 116)
+[2/13] onesoft.com.vn — ERROR (missing: 210)
+[3/13] pikabu.ru — ERROR (missing: 256)
+[4/13] ria.ru — ERROR (missing: 445)
+[5/13] kidultlovin.com — ERROR (missing: 1)
+[6/13] investing.com — NETWORK_ERROR (missing: 0)
+[7/13] ok.ru — NETWORK_ERROR (missing: 0)
+[8/13] nekto.me — NETWORK_ERROR (missing: 0)
+[9/13] fugo.com.tr — NETWORK_ERROR (missing: 0)
+[10/13] limehd.tv — NETWORK_ERROR (missing: 0)
+[11/13] avito.ru — NETWORK_ERROR (missing: 0)
+[12/13] hornet.com — NETWORK_ERROR (missing: 0)
+[13/13] hitapps.com — NETWORK_ERROR (missing: 0)
+
+=== CHECK SUMMARY ===
+Run ID: 19
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 0
+ERROR: 5
+NETWORK_ERROR: 8
+
+=== FIRST PROBLEMATIC DOMAINS ===
+clipglider.com | status=ERROR | missing_count=116 | error_details=None
+onesoft.com.vn | status=ERROR | missing_count=210 | error_details=None
+pikabu.ru | status=ERROR | missing_count=256 | error_details=None
+ria.ru | status=ERROR | missing_count=445 | error_details=None
+kidultlovin.com | status=ERROR | missing_count=1 | error_details=None
+investing.com | status=NETWORK_ERROR | missing_count=0 | error_details=Timeout
+ok.ru | status=NETWORK_ERROR | missing_count=0 | error_details=Timeout
+nekto.me | status=NETWORK_ERROR | missing_count=0 | error_details=Timeout
+fugo.com.tr | status=NETWORK_ERROR | missing_count=0 | error_details=Timeout
+limehd.tv | status=NETWORK_ERROR | missing_count=0 | error_details=Timeout
+Loaded 528 reference lines
+Loaded 13 websites
+Created check run: 21
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 125)
+[2/13] clipglider.com — ERROR (missing: 116)
+[3/13] avito.ru — ERROR (missing: 116)
+[4/13] ria.ru — ERROR (missing: 445)
+[5/13] pikabu.ru — ERROR (missing: 256)
+[6/13] limehd.tv — ERROR (missing: 8)
+[7/13] investing.com — ERROR (missing: 524)
+[8/13] nekto.me — ERROR (missing: 15)
+[9/13] kidultlovin.com — ERROR (missing: 1)
+[10/13] onesoft.com.vn — ERROR (missing: 210)
+[11/13] hornet.com — NETWORK_ERROR (missing: 0)
+[12/13] fugo.com.tr — NETWORK_ERROR (missing: 0)
+[13/13] hitapps.com — NETWORK_ERROR (missing: 0)
+
+=== CHECK SUMMARY ===
+Run ID: 21
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 0
+ERROR: 10
+NETWORK_ERROR: 3
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=125 | error_details=None
+clipglider.com | status=ERROR | missing_count=116 | error_details=None
+avito.ru | status=ERROR | missing_count=116 | error_details=None
+ria.ru | status=ERROR | missing_count=445 | error_details=None
+pikabu.ru | status=ERROR | missing_count=256 | error_details=None
+limehd.tv | status=ERROR | missing_count=8 | error_details=None
+investing.com | status=ERROR | missing_count=524 | error_details=None
+nekto.me | status=ERROR | missing_count=15 | error_details=None
+kidultlovin.com | status=ERROR | missing_count=1 | error_details=None
+onesoft.com.vn | status=ERROR | missing_count=210 | error_details=None
+Loaded 528 reference lines
+Loaded 13 websites
+Created check run: 22
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 125)
+[2/13] avito.ru — ERROR (missing: 116)
+[3/13] nekto.me — ERROR (missing: 15)
+[4/13] ria.ru — ERROR (missing: 445)
+[5/13] clipglider.com — ERROR (missing: 116)
+[6/13] pikabu.ru — ERROR (missing: 256)
+[7/13] fugo.com.tr — ERROR (missing: 25)
+[8/13] investing.com — ERROR (missing: 521)
+[9/13] hitapps.com — ERROR (missing: 1)
+[10/13] limehd.tv — ERROR (missing: 8)
+[11/13] kidultlovin.com — ERROR (missing: 1)
+[12/13] hornet.com — NETWORK_ERROR (missing: 0)
+[13/13] onesoft.com.vn — ERROR (missing: 210)
+
+=== CHECK SUMMARY ===
+Run ID: 22
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 0
+ERROR: 12
+NETWORK_ERROR: 1
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=125 | error_details=None
+avito.ru | status=ERROR | missing_count=116 | error_details=None
+nekto.me | status=ERROR | missing_count=15 | error_details=None
+ria.ru | status=ERROR | missing_count=445 | error_details=None
+clipglider.com | status=ERROR | missing_count=116 | error_details=None
+pikabu.ru | status=ERROR | missing_count=256 | error_details=None
+fugo.com.tr | status=ERROR | missing_count=25 | error_details=None
+investing.com | status=ERROR | missing_count=521 | error_details=None
+hitapps.com | status=ERROR | missing_count=1 | error_details=None
+limehd.tv | status=ERROR | missing_count=8 | error_details=None
+Loaded 528 reference lines
+Loaded 13 websites
+Created check run: 23
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 125)
+[2/13] nekto.me — ERROR (missing: 15)
+[3/13] hitapps.com — ERROR (missing: 1)
+[4/13] limehd.tv — ERROR (missing: 8)
+[5/13] investing.com — ERROR (missing: 521)
+[6/13] avito.ru — ERROR (missing: 116)
+[7/13] fugo.com.tr — ERROR (missing: 25)
+[8/13] clipglider.com — ERROR (missing: 116)
+[9/13] ria.ru — ERROR (missing: 445)
+[10/13] hornet.com — ERROR (missing: 1)
+[11/13] pikabu.ru — ERROR (missing: 256)
+[12/13] kidultlovin.com — ERROR (missing: 1)
+[13/13] onesoft.com.vn — ERROR (missing: 210)
+
+=== CHECK SUMMARY ===
+Run ID: 23
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 0
+ERROR: 13
+NETWORK_ERROR: 0
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=125 | error_details=None
+nekto.me | status=ERROR | missing_count=15 | error_details=None
+hitapps.com | status=ERROR | missing_count=1 | error_details=None
+limehd.tv | status=ERROR | missing_count=8 | error_details=None
+investing.com | status=ERROR | missing_count=521 | error_details=None
+avito.ru | status=ERROR | missing_count=116 | error_details=None
+fugo.com.tr | status=ERROR | missing_count=25 | error_details=None
+clipglider.com | status=ERROR | missing_count=116 | error_details=None
+ria.ru | status=ERROR | missing_count=445 | error_details=None
+hornet.com | status=ERROR | missing_count=1 | error_details=None
+Loaded 527 reference lines
+Loaded 13 websites
+Created check run: 29
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 124)
+[2/13] nekto.me — ERROR (missing: 14)
+[3/13] avito.ru — ERROR (missing: 115)
+[4/13] clipglider.com — ERROR (missing: 115)
+[5/13] hitapps.com — OK (missing: 0)
+[6/13] ria.ru — ERROR (missing: 444)
+[7/13] pikabu.ru — ERROR (missing: 255)
+[8/13] fugo.com.tr — ERROR (missing: 24)
+[9/13] investing.com — ERROR (missing: 520)
+[10/13] hornet.com — OK (missing: 0)
+[11/13] limehd.tv — ERROR (missing: 7)
+[12/13] kidultlovin.com — OK (missing: 0)
+[13/13] onesoft.com.vn — ERROR (missing: 209)
+
+=== CHECK SUMMARY ===
+Run ID: 29
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 3
+ERROR: 10
+NETWORK_ERROR: 0
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=124 | error_details=None
+nekto.me | status=ERROR | missing_count=14 | error_details=None
+avito.ru | status=ERROR | missing_count=115 | error_details=None
+clipglider.com | status=ERROR | missing_count=115 | error_details=None
+ria.ru | status=ERROR | missing_count=444 | error_details=None
+pikabu.ru | status=ERROR | missing_count=255 | error_details=None
+fugo.com.tr | status=ERROR | missing_count=24 | error_details=None
+investing.com | status=ERROR | missing_count=520 | error_details=None
+limehd.tv | status=ERROR | missing_count=7 | error_details=None
+onesoft.com.vn | status=ERROR | missing_count=209 | error_details=None
+Loaded 527 reference lines
+Loaded 13 websites
+Created check run: 32
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 124)
+[2/13] nekto.me — ERROR (missing: 14)
+[3/13] avito.ru — ERROR (missing: 115)
+[4/13] ria.ru — ERROR (missing: 444)
+[5/13] hitapps.com — OK (missing: 0)
+[6/13] pikabu.ru — ERROR (missing: 255)
+[7/13] clipglider.com — ERROR (missing: 115)
+[8/13] investing.com — ERROR (missing: 520)
+[9/13] fugo.com.tr — ERROR (missing: 24)
+[10/13] kidultlovin.com — OK (missing: 0)
+[11/13] onesoft.com.vn — ERROR (missing: 209)
+[12/13] limehd.tv — ERROR (missing: 7)
+[13/13] hornet.com — NETWORK_ERROR (missing: 0)
+
+=== CHECK SUMMARY ===
+Run ID: 32
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 2
+ERROR: 10
+NETWORK_ERROR: 1
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=124 | error_details=None
+nekto.me | status=ERROR | missing_count=14 | error_details=None
+avito.ru | status=ERROR | missing_count=115 | error_details=None
+ria.ru | status=ERROR | missing_count=444 | error_details=None
+pikabu.ru | status=ERROR | missing_count=255 | error_details=None
+clipglider.com | status=ERROR | missing_count=115 | error_details=None
+investing.com | status=ERROR | missing_count=520 | error_details=None
+fugo.com.tr | status=ERROR | missing_count=24 | error_details=None
+onesoft.com.vn | status=ERROR | missing_count=209 | error_details=None
+limehd.tv | status=ERROR | missing_count=7 | error_details=None
+Loaded 527 reference lines
+Loaded 13 websites
+Created check run: 33
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 124)
+[2/13] limehd.tv — ERROR (missing: 7)
+[3/13] nekto.me — ERROR (missing: 14)
+[4/13] avito.ru — ERROR (missing: 115)
+[5/13] hitapps.com — OK (missing: 0)
+[6/13] ria.ru — ERROR (missing: 444)
+[7/13] investing.com — ERROR (missing: 520)
+[8/13] clipglider.com — ERROR (missing: 115)
+[9/13] pikabu.ru — ERROR (missing: 255)
+[10/13] fugo.com.tr — ERROR (missing: 24)
+[11/13] onesoft.com.vn — ERROR (missing: 209)
+[12/13] kidultlovin.com — OK (missing: 0)
+[13/13] hornet.com — NETWORK_ERROR (missing: 0)
+
+=== CHECK SUMMARY ===
+Run ID: 33
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 2
+ERROR: 10
+NETWORK_ERROR: 1
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=124 | error_details=None
+limehd.tv | status=ERROR | missing_count=7 | error_details=None
+nekto.me | status=ERROR | missing_count=14 | error_details=None
+avito.ru | status=ERROR | missing_count=115 | error_details=None
+ria.ru | status=ERROR | missing_count=444 | error_details=None
+investing.com | status=ERROR | missing_count=520 | error_details=None
+clipglider.com | status=ERROR | missing_count=115 | error_details=None
+pikabu.ru | status=ERROR | missing_count=255 | error_details=None
+fugo.com.tr | status=ERROR | missing_count=24 | error_details=None
+onesoft.com.vn | status=ERROR | missing_count=209 | error_details=None
+Loaded 527 reference lines
+Loaded 13 websites
+Created check run: 34
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 124)
+[2/13] nekto.me — ERROR (missing: 14)
+[3/13] avito.ru — ERROR (missing: 115)
+[4/13] ria.ru — ERROR (missing: 444)
+[5/13] clipglider.com — ERROR (missing: 115)
+[6/13] pikabu.ru — ERROR (missing: 255)
+[7/13] hitapps.com — OK (missing: 0)
+[8/13] investing.com — ERROR (missing: 520)
+[9/13] fugo.com.tr — ERROR (missing: 24)
+[10/13] onesoft.com.vn — ERROR (missing: 209)
+[11/13] limehd.tv — ERROR (missing: 7)
+[12/13] kidultlovin.com — OK (missing: 0)
+[13/13] hornet.com — NETWORK_ERROR (missing: 0)
+
+=== CHECK SUMMARY ===
+Run ID: 34
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 2
+ERROR: 10
+NETWORK_ERROR: 1
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=124 | error_details=None
+nekto.me | status=ERROR | missing_count=14 | error_details=None
+avito.ru | status=ERROR | missing_count=115 | error_details=None
+ria.ru | status=ERROR | missing_count=444 | error_details=None
+clipglider.com | status=ERROR | missing_count=115 | error_details=None
+pikabu.ru | status=ERROR | missing_count=255 | error_details=None
+investing.com | status=ERROR | missing_count=520 | error_details=None
+fugo.com.tr | status=ERROR | missing_count=24 | error_details=None
+onesoft.com.vn | status=ERROR | missing_count=209 | error_details=None
+limehd.tv | status=ERROR | missing_count=7 | error_details=None
+Loaded 527 reference lines
+Loaded 13 websites
+Created check run: 35
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] hitapps.com — OK (missing: 0)
+[2/13] clipglider.com — ERROR (missing: 115)
+[3/13] limehd.tv — ERROR (missing: 7)
+[4/13] investing.com — ERROR (missing: 520)
+[5/13] nekto.me — ERROR (missing: 14)
+[6/13] fugo.com.tr — ERROR (missing: 24)
+[7/13] hornet.com — OK (missing: 0)
+[8/13] pikabu.ru — ERROR (missing: 255)
+[9/13] avito.ru — ERROR (missing: 115)
+[10/13] ria.ru — ERROR (missing: 444)
+[11/13] kidultlovin.com — OK (missing: 0)
+[12/13] onesoft.com.vn — ERROR (missing: 209)
+[13/13] ok.ru — NETWORK_ERROR (missing: 0)
+
+=== CHECK SUMMARY ===
+Run ID: 35
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 3
+ERROR: 9
+NETWORK_ERROR: 1
+
+=== FIRST PROBLEMATIC DOMAINS ===
+clipglider.com | status=ERROR | missing_count=115 | error_details=None
+limehd.tv | status=ERROR | missing_count=7 | error_details=None
+investing.com | status=ERROR | missing_count=520 | error_details=None
+nekto.me | status=ERROR | missing_count=14 | error_details=None
+fugo.com.tr | status=ERROR | missing_count=24 | error_details=None
+pikabu.ru | status=ERROR | missing_count=255 | error_details=None
+avito.ru | status=ERROR | missing_count=115 | error_details=None
+ria.ru | status=ERROR | missing_count=444 | error_details=None
+onesoft.com.vn | status=ERROR | missing_count=209 | error_details=None
+ok.ru | status=NETWORK_ERROR | missing_count=0 | error_details=RequestException
+Loaded 527 reference lines
+Loaded 13 websites
+Created check run: 36
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 124)
+[2/13] nekto.me — ERROR (missing: 14)
+[3/13] avito.ru — ERROR (missing: 115)
+[4/13] clipglider.com — ERROR (missing: 115)
+[5/13] ria.ru — ERROR (missing: 444)
+[6/13] hitapps.com — OK (missing: 0)
+[7/13] pikabu.ru — ERROR (missing: 255)
+[8/13] fugo.com.tr — ERROR (missing: 24)
+[9/13] investing.com — ERROR (missing: 520)
+[10/13] limehd.tv — ERROR (missing: 7)
+[11/13] kidultlovin.com — OK (missing: 0)
+[12/13] onesoft.com.vn — ERROR (missing: 209)
+[13/13] hornet.com — NETWORK_ERROR (missing: 0)
+
+=== CHECK SUMMARY ===
+Run ID: 36
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 2
+ERROR: 10
+NETWORK_ERROR: 1
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=124 | error_details=None
+nekto.me | status=ERROR | missing_count=14 | error_details=None
+avito.ru | status=ERROR | missing_count=115 | error_details=None
+clipglider.com | status=ERROR | missing_count=115 | error_details=None
+ria.ru | status=ERROR | missing_count=444 | error_details=None
+pikabu.ru | status=ERROR | missing_count=255 | error_details=None
+fugo.com.tr | status=ERROR | missing_count=24 | error_details=None
+investing.com | status=ERROR | missing_count=520 | error_details=None
+limehd.tv | status=ERROR | missing_count=7 | error_details=None
+onesoft.com.vn | status=ERROR | missing_count=209 | error_details=None
+Loaded 527 reference lines
+Loaded 13 websites
+Created check run: 37
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 124)
+[2/13] nekto.me — ERROR (missing: 14)
+[3/13] avito.ru — ERROR (missing: 115)
+[4/13] clipglider.com — ERROR (missing: 115)
+[5/13] pikabu.ru — ERROR (missing: 255)
+[6/13] hitapps.com — OK (missing: 0)
+[7/13] investing.com — ERROR (missing: 520)
+[8/13] limehd.tv — ERROR (missing: 7)
+[9/13] ria.ru — ERROR (missing: 444)
+[10/13] fugo.com.tr — ERROR (missing: 24)
+[11/13] kidultlovin.com — OK (missing: 0)
+[12/13] onesoft.com.vn — ERROR (missing: 209)
+[13/13] hornet.com — NETWORK_ERROR (missing: 0)
+
+=== CHECK SUMMARY ===
+Run ID: 37
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 2
+ERROR: 10
+NETWORK_ERROR: 1
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=124 | error_details=None
+nekto.me | status=ERROR | missing_count=14 | error_details=None
+avito.ru | status=ERROR | missing_count=115 | error_details=None
+clipglider.com | status=ERROR | missing_count=115 | error_details=None
+pikabu.ru | status=ERROR | missing_count=255 | error_details=None
+investing.com | status=ERROR | missing_count=520 | error_details=None
+limehd.tv | status=ERROR | missing_count=7 | error_details=None
+ria.ru | status=ERROR | missing_count=444 | error_details=None
+fugo.com.tr | status=ERROR | missing_count=24 | error_details=None
+onesoft.com.vn | status=ERROR | missing_count=209 | error_details=None
+Loaded 527 reference lines
+Loaded 13 websites
+Created check run: 38
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 124)
+[2/13] nekto.me — ERROR (missing: 14)
+[3/13] avito.ru — ERROR (missing: 115)
+[4/13] clipglider.com — ERROR (missing: 115)
+[5/13] ria.ru — ERROR (missing: 444)
+[6/13] limehd.tv — ERROR (missing: 7)
+[7/13] hornet.com — NETWORK_ERROR (missing: 0)
+[8/13] investing.com — ERROR (missing: 520)
+[9/13] pikabu.ru — ERROR (missing: 255)
+[10/13] fugo.com.tr — ERROR (missing: 24)
+[11/13] kidultlovin.com — OK (missing: 0)
+[12/13] onesoft.com.vn — ERROR (missing: 209)
+[13/13] hitapps.com — NETWORK_ERROR (missing: 0)
+
+=== CHECK SUMMARY ===
+Run ID: 38
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 1
+ERROR: 10
+NETWORK_ERROR: 2
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=124 | error_details=None
+nekto.me | status=ERROR | missing_count=14 | error_details=None
+avito.ru | status=ERROR | missing_count=115 | error_details=None
+clipglider.com | status=ERROR | missing_count=115 | error_details=None
+ria.ru | status=ERROR | missing_count=444 | error_details=None
+limehd.tv | status=ERROR | missing_count=7 | error_details=None
+hornet.com | status=NETWORK_ERROR | missing_count=0 | error_details=RequestException
+investing.com | status=ERROR | missing_count=520 | error_details=None
+pikabu.ru | status=ERROR | missing_count=255 | error_details=None
+fugo.com.tr | status=ERROR | missing_count=24 | error_details=None
+Loaded 527 reference lines
+Loaded 13 websites
+Created check run: 39
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 124)
+[2/13] avito.ru — ERROR (missing: 115)
+[3/13] nekto.me — ERROR (missing: 14)
+[4/13] limehd.tv — ERROR (missing: 7)
+[5/13] ria.ru — ERROR (missing: 444)
+[6/13] hitapps.com — OK (missing: 0)
+[7/13] investing.com — ERROR (missing: 520)
+[8/13] clipglider.com — ERROR (missing: 115)
+[9/13] fugo.com.tr — ERROR (missing: 24)
+[10/13] kidultlovin.com — OK (missing: 0)
+[11/13] pikabu.ru — ERROR (missing: 255)
+[12/13] onesoft.com.vn — ERROR (missing: 209)
+[13/13] hornet.com — NETWORK_ERROR (missing: 0)
+
+=== CHECK SUMMARY ===
+Run ID: 39
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 2
+ERROR: 10
+NETWORK_ERROR: 1
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=124 | error_details=None
+avito.ru | status=ERROR | missing_count=115 | error_details=None
+nekto.me | status=ERROR | missing_count=14 | error_details=None
+limehd.tv | status=ERROR | missing_count=7 | error_details=None
+ria.ru | status=ERROR | missing_count=444 | error_details=None
+investing.com | status=ERROR | missing_count=520 | error_details=None
+clipglider.com | status=ERROR | missing_count=115 | error_details=None
+fugo.com.tr | status=ERROR | missing_count=24 | error_details=None
+pikabu.ru | status=ERROR | missing_count=255 | error_details=None
+onesoft.com.vn | status=ERROR | missing_count=209 | error_details=None
+Loaded 527 reference lines
+Loaded 13 websites
+Created check run: 40
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 124)
+[2/13] avito.ru — ERROR (missing: 115)
+[3/13] nekto.me — ERROR (missing: 14)
+[4/13] clipglider.com — ERROR (missing: 115)
+[5/13] ria.ru — ERROR (missing: 444)
+[6/13] pikabu.ru — ERROR (missing: 255)
+[7/13] hitapps.com — OK (missing: 0)
+[8/13] fugo.com.tr — ERROR (missing: 24)
+[9/13] investing.com — ERROR (missing: 520)
+[10/13] kidultlovin.com — OK (missing: 0)
+[11/13] onesoft.com.vn — ERROR (missing: 209)
+[12/13] limehd.tv — ERROR (missing: 7)
+[13/13] hornet.com — NETWORK_ERROR (missing: 0)
+
+=== CHECK SUMMARY ===
+Run ID: 40
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 2
+ERROR: 10
+NETWORK_ERROR: 1
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=124 | error_details=None
+avito.ru | status=ERROR | missing_count=115 | error_details=None
+nekto.me | status=ERROR | missing_count=14 | error_details=None
+clipglider.com | status=ERROR | missing_count=115 | error_details=None
+ria.ru | status=ERROR | missing_count=444 | error_details=None
+pikabu.ru | status=ERROR | missing_count=255 | error_details=None
+fugo.com.tr | status=ERROR | missing_count=24 | error_details=None
+investing.com | status=ERROR | missing_count=520 | error_details=None
+onesoft.com.vn | status=ERROR | missing_count=209 | error_details=None
+limehd.tv | status=ERROR | missing_count=7 | error_details=None
+Loaded 527 reference lines
+Loaded 13 websites
+Created check run: 41
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 124)
+[2/13] clipglider.com — ERROR (missing: 115)
+[3/13] investing.com — ERROR (missing: 520)
+[4/13] nekto.me — ERROR (missing: 14)
+[5/13] ria.ru — ERROR (missing: 444)
+[6/13] avito.ru — ERROR (missing: 115)
+[7/13] pikabu.ru — ERROR (missing: 255)
+[8/13] limehd.tv — ERROR (missing: 7)
+[9/13] hitapps.com — OK (missing: 0)
+[10/13] fugo.com.tr — ERROR (missing: 24)
+[11/13] onesoft.com.vn — ERROR (missing: 209)
+[12/13] kidultlovin.com — OK (missing: 0)
+[13/13] hornet.com — NETWORK_ERROR (missing: 0)
+
+=== CHECK SUMMARY ===
+Run ID: 41
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 2
+ERROR: 10
+NETWORK_ERROR: 1
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=124 | error_details=None
+clipglider.com | status=ERROR | missing_count=115 | error_details=None
+investing.com | status=ERROR | missing_count=520 | error_details=None
+nekto.me | status=ERROR | missing_count=14 | error_details=None
+ria.ru | status=ERROR | missing_count=444 | error_details=None
+avito.ru | status=ERROR | missing_count=115 | error_details=None
+pikabu.ru | status=ERROR | missing_count=255 | error_details=None
+limehd.tv | status=ERROR | missing_count=7 | error_details=None
+fugo.com.tr | status=ERROR | missing_count=24 | error_details=None
+onesoft.com.vn | status=ERROR | missing_count=209 | error_details=None
+Loaded 527 reference lines
+Loaded 13 websites
+Created check run: 42
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 124)
+[2/13] avito.ru — ERROR (missing: 115)
+[3/13] nekto.me — ERROR (missing: 14)
+[4/13] ria.ru — ERROR (missing: 444)
+[5/13] clipglider.com — ERROR (missing: 115)
+[6/13] hitapps.com — OK (missing: 0)
+[7/13] pikabu.ru — ERROR (missing: 255)
+[8/13] investing.com — ERROR (missing: 520)
+[9/13] kidultlovin.com — OK (missing: 0)
+[10/13] fugo.com.tr — ERROR (missing: 24)
+[11/13] onesoft.com.vn — ERROR (missing: 209)
+[12/13] limehd.tv — ERROR (missing: 7)
+[13/13] hornet.com — NETWORK_ERROR (missing: 0)
+
+=== CHECK SUMMARY ===
+Run ID: 42
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 2
+ERROR: 10
+NETWORK_ERROR: 1
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=124 | error_details=None
+avito.ru | status=ERROR | missing_count=115 | error_details=None
+nekto.me | status=ERROR | missing_count=14 | error_details=None
+ria.ru | status=ERROR | missing_count=444 | error_details=None
+clipglider.com | status=ERROR | missing_count=115 | error_details=None
+pikabu.ru | status=ERROR | missing_count=255 | error_details=None
+investing.com | status=ERROR | missing_count=520 | error_details=None
+fugo.com.tr | status=ERROR | missing_count=24 | error_details=None
+onesoft.com.vn | status=ERROR | missing_count=209 | error_details=None
+limehd.tv | status=ERROR | missing_count=7 | error_details=None
+Loaded 527 reference lines
+Loaded 13 websites
+Created check run: 43
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 124)
+[2/13] limehd.tv — ERROR (missing: 7)
+[3/13] avito.ru — ERROR (missing: 115)
+[4/13] nekto.me — ERROR (missing: 14)
+[5/13] hitapps.com — OK (missing: 0)
+[6/13] ria.ru — ERROR (missing: 444)
+[7/13] clipglider.com — ERROR (missing: 115)
+[8/13] pikabu.ru — ERROR (missing: 255)
+[9/13] investing.com — ERROR (missing: 520)
+[10/13] fugo.com.tr — ERROR (missing: 24)
+[11/13] kidultlovin.com — OK (missing: 0)
+[12/13] hornet.com — NETWORK_ERROR (missing: 0)
+[13/13] onesoft.com.vn — ERROR (missing: 209)
+
+=== CHECK SUMMARY ===
+Run ID: 43
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 2
+ERROR: 10
+NETWORK_ERROR: 1
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=124 | error_details=None
+limehd.tv | status=ERROR | missing_count=7 | error_details=None
+avito.ru | status=ERROR | missing_count=115 | error_details=None
+nekto.me | status=ERROR | missing_count=14 | error_details=None
+ria.ru | status=ERROR | missing_count=444 | error_details=None
+clipglider.com | status=ERROR | missing_count=115 | error_details=None
+pikabu.ru | status=ERROR | missing_count=255 | error_details=None
+investing.com | status=ERROR | missing_count=520 | error_details=None
+fugo.com.tr | status=ERROR | missing_count=24 | error_details=None
+hornet.com | status=NETWORK_ERROR | missing_count=0 | error_details=Timeout
+Loaded 527 reference lines
+Loaded 13 websites
+Created check run: 44
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 124)
+[2/13] limehd.tv — ERROR (missing: 7)
+[3/13] nekto.me — ERROR (missing: 14)
+[4/13] avito.ru — ERROR (missing: 115)
+[5/13] clipglider.com — ERROR (missing: 115)
+[6/13] fugo.com.tr — ERROR (missing: 24)
+[7/13] pikabu.ru — ERROR (missing: 255)
+[8/13] investing.com — ERROR (missing: 520)
+[9/13] ria.ru — ERROR (missing: 444)
+[10/13] hornet.com — OK (missing: 0)
+[11/13] kidultlovin.com — OK (missing: 0)
+[12/13] onesoft.com.vn — ERROR (missing: 209)
+[13/13] hitapps.com — NETWORK_ERROR (missing: 0)
+
+=== CHECK SUMMARY ===
+Run ID: 44
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 2
+ERROR: 10
+NETWORK_ERROR: 1
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=124 | error_details=None
+limehd.tv | status=ERROR | missing_count=7 | error_details=None
+nekto.me | status=ERROR | missing_count=14 | error_details=None
+avito.ru | status=ERROR | missing_count=115 | error_details=None
+clipglider.com | status=ERROR | missing_count=115 | error_details=None
+fugo.com.tr | status=ERROR | missing_count=24 | error_details=None
+pikabu.ru | status=ERROR | missing_count=255 | error_details=None
+investing.com | status=ERROR | missing_count=520 | error_details=None
+ria.ru | status=ERROR | missing_count=444 | error_details=None
+onesoft.com.vn | status=ERROR | missing_count=209 | error_details=None
+Loaded 527 reference lines
+Loaded 13 websites
+Created check run: 45
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 124)
+[2/13] limehd.tv — ERROR (missing: 7)
+[3/13] avito.ru — ERROR (missing: 115)
+[4/13] nekto.me — ERROR (missing: 14)
+[5/13] clipglider.com — ERROR (missing: 115)
+[6/13] hitapps.com — OK (missing: 0)
+[7/13] pikabu.ru — ERROR (missing: 255)
+[8/13] investing.com — ERROR (missing: 520)
+[9/13] fugo.com.tr — ERROR (missing: 24)
+[10/13] ria.ru — ERROR (missing: 444)
+[11/13] kidultlovin.com — OK (missing: 0)
+[12/13] onesoft.com.vn — ERROR (missing: 211)
+[13/13] hornet.com — NETWORK_ERROR (missing: 0)
+
+=== CHECK SUMMARY ===
+Run ID: 45
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 2
+ERROR: 10
+NETWORK_ERROR: 1
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=124 | error_details=None
+limehd.tv | status=ERROR | missing_count=7 | error_details=None
+avito.ru | status=ERROR | missing_count=115 | error_details=None
+nekto.me | status=ERROR | missing_count=14 | error_details=None
+clipglider.com | status=ERROR | missing_count=115 | error_details=None
+pikabu.ru | status=ERROR | missing_count=255 | error_details=None
+investing.com | status=ERROR | missing_count=520 | error_details=None
+fugo.com.tr | status=ERROR | missing_count=24 | error_details=None
+ria.ru | status=ERROR | missing_count=444 | error_details=None
+onesoft.com.vn | status=ERROR | missing_count=211 | error_details=None
+Loaded 527 reference lines
+Loaded 13 websites
+Created check run: 46
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 124)
+[2/13] hornet.com — NETWORK_ERROR (missing: 0)
+[3/13] limehd.tv — ERROR (missing: 7)
+[4/13] avito.ru — ERROR (missing: 115)
+[5/13] nekto.me — ERROR (missing: 14)
+[6/13] ria.ru — ERROR (missing: 444)
+[7/13] clipglider.com — ERROR (missing: 115)
+[8/13] pikabu.ru — ERROR (missing: 255)
+[9/13] investing.com — ERROR (missing: 520)
+[10/13] onesoft.com.vn — ERROR (missing: 211)
+[11/13] kidultlovin.com — OK (missing: 0)
+[12/13] hitapps.com — NETWORK_ERROR (missing: 0)
+[13/13] fugo.com.tr — NETWORK_ERROR (missing: 0)
+
+=== CHECK SUMMARY ===
+Run ID: 46
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 1
+ERROR: 9
+NETWORK_ERROR: 3
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=124 | error_details=None
+hornet.com | status=NETWORK_ERROR | missing_count=0 | error_details=RequestException
+limehd.tv | status=ERROR | missing_count=7 | error_details=None
+avito.ru | status=ERROR | missing_count=115 | error_details=None
+nekto.me | status=ERROR | missing_count=14 | error_details=None
+ria.ru | status=ERROR | missing_count=444 | error_details=None
+clipglider.com | status=ERROR | missing_count=115 | error_details=None
+pikabu.ru | status=ERROR | missing_count=255 | error_details=None
+investing.com | status=ERROR | missing_count=520 | error_details=None
+onesoft.com.vn | status=ERROR | missing_count=211 | error_details=None
+Loaded 527 reference lines
+Loaded 13 websites
+Created check run: 47
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 124)
+[2/13] hornet.com — NETWORK_ERROR (missing: 0)
+[3/13] nekto.me — ERROR (missing: 14)
+[4/13] limehd.tv — ERROR (missing: 7)
+[5/13] avito.ru — ERROR (missing: 115)
+[6/13] ria.ru — ERROR (missing: 444)
+[7/13] clipglider.com — ERROR (missing: 115)
+[8/13] pikabu.ru — ERROR (missing: 255)
+[9/13] investing.com — ERROR (missing: 520)
+[10/13] fugo.com.tr — ERROR (missing: 24)
+[11/13] kidultlovin.com — OK (missing: 0)
+[12/13] onesoft.com.vn — ERROR (missing: 211)
+[13/13] hitapps.com — NETWORK_ERROR (missing: 0)
+
+=== CHECK SUMMARY ===
+Run ID: 47
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 1
+ERROR: 10
+NETWORK_ERROR: 2
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=124 | error_details=None
+hornet.com | status=NETWORK_ERROR | missing_count=0 | error_details=RequestException
+nekto.me | status=ERROR | missing_count=14 | error_details=None
+limehd.tv | status=ERROR | missing_count=7 | error_details=None
+avito.ru | status=ERROR | missing_count=115 | error_details=None
+ria.ru | status=ERROR | missing_count=444 | error_details=None
+clipglider.com | status=ERROR | missing_count=115 | error_details=None
+pikabu.ru | status=ERROR | missing_count=255 | error_details=None
+investing.com | status=ERROR | missing_count=520 | error_details=None
+fugo.com.tr | status=ERROR | missing_count=24 | error_details=None
+Loaded 527 reference lines
+Loaded 13 websites
+Created check run: 48
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 124)
+[2/13] limehd.tv — ERROR (missing: 7)
+[3/13] hornet.com — NETWORK_ERROR (missing: 0)
+[4/13] avito.ru — ERROR (missing: 115)
+[5/13] nekto.me — ERROR (missing: 14)
+[6/13] ria.ru — ERROR (missing: 444)
+[7/13] clipglider.com — ERROR (missing: 115)
+[8/13] hitapps.com — OK (missing: 0)
+[9/13] investing.com — ERROR (missing: 520)
+[10/13] pikabu.ru — ERROR (missing: 255)
+[11/13] kidultlovin.com — OK (missing: 0)
+[12/13] onesoft.com.vn — ERROR (missing: 211)
+[13/13] fugo.com.tr — NETWORK_ERROR (missing: 0)
+
+=== CHECK SUMMARY ===
+Run ID: 48
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 2
+ERROR: 9
+NETWORK_ERROR: 2
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=124 | error_details=None
+limehd.tv | status=ERROR | missing_count=7 | error_details=None
+hornet.com | status=NETWORK_ERROR | missing_count=0 | error_details=RequestException
+avito.ru | status=ERROR | missing_count=115 | error_details=None
+nekto.me | status=ERROR | missing_count=14 | error_details=None
+ria.ru | status=ERROR | missing_count=444 | error_details=None
+clipglider.com | status=ERROR | missing_count=115 | error_details=None
+investing.com | status=ERROR | missing_count=520 | error_details=None
+pikabu.ru | status=ERROR | missing_count=255 | error_details=None
+onesoft.com.vn | status=ERROR | missing_count=211 | error_details=None
+Loaded 527 reference lines
+Loaded 13 websites
+Created check run: 49
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 124)
+[2/13] avito.ru — ERROR (missing: 115)
+[3/13] clipglider.com — ERROR (missing: 115)
+[4/13] nekto.me — ERROR (missing: 14)
+[5/13] ria.ru — ERROR (missing: 444)
+[6/13] hitapps.com — OK (missing: 0)
+[7/13] pikabu.ru — ERROR (missing: 255)
+[8/13] fugo.com.tr — ERROR (missing: 24)
+[9/13] investing.com — ERROR (missing: 520)
+[10/13] limehd.tv — ERROR (missing: 7)
+[11/13] kidultlovin.com — OK (missing: 0)
+[12/13] onesoft.com.vn — ERROR (missing: 211)
+[13/13] hornet.com — NETWORK_ERROR (missing: 0)
+
+=== CHECK SUMMARY ===
+Run ID: 49
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 2
+ERROR: 10
+NETWORK_ERROR: 1
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=124 | error_details=None
+avito.ru | status=ERROR | missing_count=115 | error_details=None
+clipglider.com | status=ERROR | missing_count=115 | error_details=None
+nekto.me | status=ERROR | missing_count=14 | error_details=None
+ria.ru | status=ERROR | missing_count=444 | error_details=None
+pikabu.ru | status=ERROR | missing_count=255 | error_details=None
+fugo.com.tr | status=ERROR | missing_count=24 | error_details=None
+investing.com | status=ERROR | missing_count=520 | error_details=None
+limehd.tv | status=ERROR | missing_count=7 | error_details=None
+onesoft.com.vn | status=ERROR | missing_count=211 | error_details=None
+Loaded 527 reference lines
+Loaded 13 websites
+Created check run: 50
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 124)
+[2/13] nekto.me — ERROR (missing: 14)
+[3/13] avito.ru — ERROR (missing: 115)
+[4/13] clipglider.com — ERROR (missing: 115)
+[5/13] ria.ru — ERROR (missing: 444)
+[6/13] hitapps.com — OK (missing: 0)
+[7/13] investing.com — ERROR (missing: 520)
+[8/13] pikabu.ru — ERROR (missing: 255)
+[9/13] fugo.com.tr — ERROR (missing: 24)
+[10/13] limehd.tv — ERROR (missing: 7)
+[11/13] kidultlovin.com — OK (missing: 0)
+[12/13] onesoft.com.vn — ERROR (missing: 211)
+[13/13] hornet.com — NETWORK_ERROR (missing: 0)
+
+=== CHECK SUMMARY ===
+Run ID: 50
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 2
+ERROR: 10
+NETWORK_ERROR: 1
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=124 | error_details=None
+nekto.me | status=ERROR | missing_count=14 | error_details=None
+avito.ru | status=ERROR | missing_count=115 | error_details=None
+clipglider.com | status=ERROR | missing_count=115 | error_details=None
+ria.ru | status=ERROR | missing_count=444 | error_details=None
+investing.com | status=ERROR | missing_count=520 | error_details=None
+pikabu.ru | status=ERROR | missing_count=255 | error_details=None
+fugo.com.tr | status=ERROR | missing_count=24 | error_details=None
+limehd.tv | status=ERROR | missing_count=7 | error_details=None
+onesoft.com.vn | status=ERROR | missing_count=211 | error_details=None
+Loaded 527 reference lines
+Loaded 13 websites
+Created check run: 51
+Workers: 10
+
+Starting parallel checks...
+
+[1/13] ok.ru — ERROR (missing: 124)
+[2/13] limehd.tv — ERROR (missing: 7)
+[3/13] avito.ru — ERROR (missing: 115)
+[4/13] nekto.me — ERROR (missing: 14)
+[5/13] fugo.com.tr — ERROR (missing: 24)
+[6/13] hitapps.com — OK (missing: 0)
+[7/13] ria.ru — ERROR (missing: 444)
+[8/13] pikabu.ru — ERROR (missing: 255)
+[9/13] clipglider.com — ERROR (missing: 115)
+[10/13] investing.com — ERROR (missing: 520)
+[11/13] kidultlovin.com — OK (missing: 0)
+[12/13] onesoft.com.vn — ERROR (missing: 211)
+[13/13] hornet.com — NETWORK_ERROR (missing: 0)
+
+=== CHECK SUMMARY ===
+Run ID: 51
+Total domains checked: 13
+Saved to DB: 13
+Skipped (not in mapping): 0
+OK: 2
+ERROR: 10
+NETWORK_ERROR: 1
+
+=== FIRST PROBLEMATIC DOMAINS ===
+ok.ru | status=ERROR | missing_count=124 | error_details=None
+limehd.tv | status=ERROR | missing_count=7 | error_details=None
+avito.ru | status=ERROR | missing_count=115 | error_details=None
+nekto.me | status=ERROR | missing_count=14 | error_details=None
+fugo.com.tr | status=ERROR | missing_count=24 | error_details=None
+ria.ru | status=ERROR | missing_count=444 | error_details=None
+pikabu.ru | status=ERROR | missing_count=255 | error_details=None
+clipglider.com | status=ERROR | missing_count=115 | error_details=None
+investing.com | status=ERROR | missing_count=520 | error_details=None
+onesoft.com.vn | status=ERROR | missing_count=211 | error_details=None
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/app/main.py", line 40, in main
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/app/db.py", line 42, in get_connection
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/.venv/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "app_ads_monitoring" does not exist
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/app/main.py", line 40, in main
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/app/db.py", line 42, in get_connection
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/.venv/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "app_ads_monitoring" does not exist
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/app/main.py", line 40, in main
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/app/db.py", line 42, in get_connection
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/.venv/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "app_ads_monitoring" does not exist
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/app/main.py", line 40, in main
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/app/db.py", line 42, in get_connection
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/.venv/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "app_ads_monitoring" does not exist
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/app/main.py", line 40, in main
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/app/db.py", line 42, in get_connection
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/.venv/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "app_ads_monitoring" does not exist
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/app/main.py", line 40, in main
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/app/db.py", line 42, in get_connection
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/.venv/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "app_ads_monitoring" does not exist
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/app/main.py", line 40, in main
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/app/db.py", line 42, in get_connection
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/.venv/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "app_ads_monitoring" does not exist
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/app/main.py", line 40, in main
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/app/db.py", line 42, in get_connection
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/.venv/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "app_ads_monitoring" does not exist
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/app/main.py", line 40, in main
+    conn = get_connection()
+           ^^^^^^^^^^^^^^^^
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/app/db.py", line 42, in get_connection
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ulboh/PycharmProjects/app_ads_monitoring/.venv/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "app_ads_monitoring" does not exist
+
