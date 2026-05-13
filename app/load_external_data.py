@@ -106,7 +106,6 @@ def load_funnel(file_path: Path, cursor) -> None:
             if not line:
                 continue
 
-            # иногда в начале строки может быть лишний символ
             if line.startswith("t{"):
                 line = line[1:]
 
@@ -126,7 +125,6 @@ def load_funnel(file_path: Path, cursor) -> None:
 
             page_id = str(page_id)
 
-            # проверяем что page_id существует в pages
             cursor.execute(
                 "SELECT 1 FROM pages WHERE page_id = %s",
                 (page_id,)
