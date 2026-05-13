@@ -30,10 +30,7 @@ app = Flask(
 )
 app.secret_key = os.getenv("FLASK_SECRET_KEY", "dev-secret-key")
 
-# ─────────────────────────────────────────
-# Пользователи (демо-контур)
-# В промышленной среде заменяется на БД
-# ─────────────────────────────────────────
+
 USERS = {
     "analyst": {
         "password": "analyst123",
@@ -46,9 +43,7 @@ USERS = {
 }
 
 
-# ─────────────────────────────────────────
 # Декораторы доступа
-# ─────────────────────────────────────────
 def login_required(f):
     @wraps(f)
     def decorated(*args, **kwargs):
@@ -75,9 +70,7 @@ def analyst_required(f):
         return f(*args, **kwargs)
     return decorated
 
-# ─────────────────────────────────────────
 # Авторизация
-# ─────────────────────────────────────────
 @app.route("/login", methods=["GET", "POST"])
 def login():
     error = None
@@ -104,16 +97,12 @@ def logout():
     return redirect(url_for("login"))
 
 
-# ─────────────────────────────────────────
 # Главная — список прогонов
-# ─────────────────────────────────────────
 @app.route("/")
 @login_required
 def runs():
-    # Получаем дату из параметров запроса
     date_filter = request.args.get("date")
 
-    # Передаем дату в функцию (даже если она None)
     df = get_all_runs(date_filter)
     runs_list = df.to_dict(orient="records")
 
@@ -132,23 +121,19 @@ def runs():
         "runs.html",
         runs=runs_list,
         date_filter=date_filter,
-        next_run=next_run,  # <--- Передаем в шаблон
+        next_run=next_run,
         username=session.get("username"),
         role=session.get("role"),
     )
 
 
-# ─────────────────────────────────────────
 # Детализация прогона
-# ─────────────────────────────────────────
 @app.route("/run/<int:run_id>")
 @login_required
 def run_detail(run_id: int):
     summary = get_run_summary(run_id)
     df = get_run_results(run_id)
 
-    # получаем уникальные значения для фильтров
-    # до применения фильтрации
     managers = sorted(df["manager"].dropna().unique().tolist())
     segments = sorted(df["segment"].dropna().unique().tolist())
 
@@ -212,9 +197,7 @@ def run_detail(run_id: int):
     )
 
 
-# ─────────────────────────────────────────
 # Детализация домена — missing lines
-# ─────────────────────────────────────────
 @app.route("/result/<int:result_id>")
 @login_required
 def domain_detail(result_id: int):
@@ -250,11 +233,9 @@ def domain_detail(result_id: int):
     if df.empty:
         return render_template("404.html"), 404
 
-    # явно передаём result_id
     result = df.iloc[0].to_dict()
     result["result_id"] = result_id
 
-    # приводим типы
     result["match_rate"] = float(result.get("match_rate", 0))
     result["missing_count"] = int(result.get("missing_count", 0))
     result["page_tac_last_30_days"] = float(
@@ -265,10 +246,8 @@ def domain_detail(result_id: int):
     )
     domain_name = result["domain"]
 
-    # 2. Получаем историю
     history = get_domain_history(domain_name)
 
-    # 3. Подготавливаем списки для Chart.js
     chart_labels = [h["date"] for h in history]
     chart_data = [h["rate"] for h in history]
 
@@ -285,9 +264,7 @@ def domain_detail(result_id: int):
         role=session.get("role"),
     )
 
-# ─────────────────────────────────────────
 # Экспорт CSV / XLSX
-# ─────────────────────────────────────────
 @app.route("/run/<int:run_id>/export")
 @login_required
 def export(run_id: int):
@@ -306,7 +283,6 @@ def export(run_id: int):
             download_name=f"run_{run_id}_results.xlsx",
         )
 
-    # CSV по умолчанию
     output = io.StringIO()
     df.to_csv(output, index=False)
     output.seek(0)
@@ -318,9 +294,7 @@ def export(run_id: int):
     )
 
 
-# ─────────────────────────────────────────
 # Запуск проверки вручную (только аналитик)
-# ─────────────────────────────────────────
 @app.route("/run/start", methods=["POST"])
 @analyst_required
 def start_run():
@@ -339,18 +313,14 @@ def export_missing_lines(result_id: int):
 
     if fmt == "csv":
         output = io.StringIO()
-        # заголовки
         output.write("ad_system_domain,publisher_id,relationship,certification_id\n")
 
         for line in lines:
-            # разбиваем строку на части по запятой
             parts = [p.strip() for p in line.split(",")]
 
-            # дополняем до 4 полей если certification_id отсутствует
             while len(parts) < 4:
                 parts.append("")
 
-            # экранируем каждое поле
             escaped = [f'"{p}"' for p in parts[:4]]
             output.write(",".join(escaped) + "\n")
 
@@ -362,7 +332,6 @@ def export_missing_lines(result_id: int):
             download_name=f"missing_lines_{result_id}.csv",
         )
 
-    # TXT по умолчанию — просто строки для вставки в app-ads.txt
     output = io.StringIO()
     for line in lines:
         output.write(line + "\n")
@@ -376,7 +345,7 @@ def export_missing_lines(result_id: int):
 
 
 @app.route("/runs/delete", methods=["POST"])
-@analyst_required  # Только аналитик может удалять
+@analyst_required
 def delete_runs_route():
     # Получаем список ID из чекбоксов
     run_ids = request.form.getlist("run_ids")
@@ -386,7 +355,6 @@ def delete_runs_route():
         return redirect(url_for("runs"))
 
     try:
-        # Преобразуем строки в числа
         ids_to_delete = [int(x) for x in run_ids]
         count = delete_runs(ids_to_delete)
         flash(f"Успешно удалено прогонов: {count}")
@@ -396,9 +364,7 @@ def delete_runs_route():
     return redirect(url_for("runs"))
 
 
-# ─────────────────────────────────────────
 # Управление эталоном (Только аналитик)
-# ─────────────────────────────────────────
 @app.route("/config/reference", methods=["GET", "POST"])
 @analyst_required
 def reference_config():
@@ -407,7 +373,6 @@ def reference_config():
     ref_path = CONFIG_DIR / "reference.txt"
 
     if request.method == "POST":
-        # Проверяем, есть ли файл в запросе
         if "file" not in request.files:
             flash("Нет файла в запросе")
             return redirect(request.url)
@@ -420,22 +385,17 @@ def reference_config():
 
         if file:
             try:
-                # Читаем содержимое для валидации
                 content = file.read().decode("utf-8")
                 lines = [l for l in content.splitlines() if l.strip()]
 
-                # Простая валидация: должно быть > 0 строк
                 if not lines:
                     flash("Ошибка: Файл пустой!")
                     return redirect(request.url)
 
-                # Проверка формата первой строки (грубая)
-                # Ожидаем: domain, id, type
                 if "," not in lines[0]:
                     flash("Ошибка формата: строки должны содержать запятые (domain, id, type)")
                     return redirect(request.url)
 
-                # Сохраняем файл (перезаписываем старый)
                 with open(ref_path, "w", encoding="utf-8") as f:
                     f.write(content)
 
@@ -446,7 +406,6 @@ def reference_config():
 
             return redirect(request.url)
 
-    # GET запрос - показываем статистику
     current_lines = []
     try:
         if ref_path.exists():
@@ -458,7 +417,7 @@ def reference_config():
     return render_template(
         "reference.html",
         line_count=len(current_lines),
-        preview_lines="".join(current_lines[:5]),  # Первые 5 строк для превью
+        preview_lines="".join(current_lines[:5]),
         username=session.get("username"),
         role=session.get("role"),
     )
@@ -480,7 +439,6 @@ def download_reference():
 @app.route("/monitoring")
 @login_required
 def monitoring():
-    # Получаем проблемные домены
     alerts = get_monitoring_alerts()
 
     return render_template(
@@ -532,10 +490,8 @@ def mailto_manager(result_id: int):
         flash("Email партнёра не найден.")
         return redirect(url_for("domain_detail", result_id=result_id))
 
-    # получаем отсутствующие строки
     missing_lines = get_missing_lines(result_id)
 
-    # первые 50 строк в тело письма
     lines_text = "\n".join(missing_lines[:50])
     if len(missing_lines) > 50:
         lines_text += (
@@ -580,9 +536,7 @@ https://{domain}/app-ads.txt
 
 
 
-# ─────────────────────────────────────────
 # Планировщик суточного запуска
-# ─────────────────────────────────────────
 scheduler = BackgroundScheduler()
 scheduler.add_job(
     func=run_check,
@@ -596,9 +550,7 @@ scheduler.add_job(
 scheduler.start()
 
 
-# ─────────────────────────────────────────
 # Запуск приложения
-# ─────────────────────────────────────────
 if __name__ == "__main__":
     app.run(debug=False, port=5000)
 
