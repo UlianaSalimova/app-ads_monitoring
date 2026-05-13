@@ -16,7 +16,6 @@ from app.db import (
     close_connection,
 )
 
-# Количество параллельных потоков для сетевых запросов
 MAX_WORKERS = 10
 
 
@@ -49,7 +48,6 @@ def main() -> None:
         print(f"Workers: {MAX_WORKERS}")
         print("\nStarting parallel checks...\n")
 
-        # ── Параллельный сбор и анализ данных ──
         with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
             future_to_domain = {
                 executor.submit(check_domain, domain, reference_set): domain
@@ -72,7 +70,6 @@ def main() -> None:
                     f"(missing: {result['missing_count']})"
                 )
 
-        # ── Последовательная запись в БД ──
         for result in results:
             try:
                 save_check_result(conn, run_id, result)
