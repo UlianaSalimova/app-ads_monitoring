@@ -137,17 +137,13 @@ def delete_runs(run_ids: list[int]) -> int:
     conn = get_connection()
     try:
         with conn.cursor() as cursor:
-            # Превращаем список [1, 2] в кортеж (1, 2) для SQL
             ids_tuple = tuple(run_ids)
 
-            # 1. Сначала удаляем результаты (missing_lines удалятся каскадно,
-            # если в схеме есть ON DELETE CASCADE, но лучше удалить явно результаты)
             cursor.execute(
                 "DELETE FROM check_results WHERE run_id IN %s",
                 (ids_tuple,)
             )
 
-            # 2. Удаляем сами прогоны
             cursor.execute(
                 "DELETE FROM check_runs WHERE run_id IN %s",
                 (ids_tuple,)
