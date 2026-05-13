@@ -42,19 +42,15 @@ def get_all_runs(date_filter: str = None) -> pd.DataFrame:
     params = {}
 
     if date_filter:
-        # Flatpickr может слать длинное тире с пробелами
-        # "2023-01-01 — 2023-01-05"
 
         separator = " — "
 
         if separator in date_filter:
-            # Диапазон дат
             start_date, end_date = date_filter.split(separator)
             sql += " WHERE DATE(started_at) BETWEEN %(start)s AND %(end)s"
             params["start"] = start_date
             params["end"] = end_date
         else:
-            # Одиночная дата
             sql += " WHERE DATE(started_at) = %(date)s"
             params["date"] = date_filter
 
@@ -181,7 +177,6 @@ def get_domain_history(domain: str) -> list[dict]:
 
     df = pd.read_sql(query, engine, params={"domain": domain})
 
-    # Превращаем в список словарей, даты в строки
     history = []
     for _, row in df.iterrows():
         history.append({
@@ -202,7 +197,6 @@ def get_monitoring_alerts() -> list[dict]:
     """
     engine = get_engine()
 
-    # 1. Берем историю по всем доменам, отсортированную по времени (новые первые)
     query = """
         SELECT 
             cr.domain, 
@@ -220,8 +214,6 @@ def get_monitoring_alerts() -> list[dict]:
         ORDER BY cr.domain, cr.checked_at DESC
     """
 
-    # Внимание: поле run_id в check_results. Проверь схему, у тебя run_id.
-    # Исправляю запрос на правильный join
     query = """
         SELECT 
             cr.domain, 
@@ -242,23 +234,18 @@ def get_monitoring_alerts() -> list[dict]:
 
     alerts = []
 
-    # Группируем по домену
     for domain, group in df.groupby("domain"):
-        # group уже отсортирована по убыванию даты (свежие сверху)
         latest = group.iloc[0]
 
-        # Анализируем только если текущий статус ERROR
-        # (Хотя можно показывать всех, но нас интересуют ПРОБЛЕМЫ)
         if latest["ads_status"] != "OK":
 
-            # Считаем длительность проблемы (streak)
             streak = 0
             start_date = latest["checked_at"]
 
             for _, row in group.iterrows():
                 if row["ads_status"] == latest["ads_status"]:
                     streak += 1
-                    start_date = row["checked_at"]  # Сдвигаем дату начала проблемы назад
+                    start_date = row["checked_at"] 
                 else:
                     break
 
@@ -273,7 +260,6 @@ def get_monitoring_alerts() -> list[dict]:
                 "problem_since": start_date
             })
 
-    # Сортируем: сначала самые богатые, потом самые долгие проблемы
     alerts.sort(key=lambda x: (x["revenue"], x["streak_count"]), reverse=True)
 
     return alerts
