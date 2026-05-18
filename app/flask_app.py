@@ -30,14 +30,13 @@ app = Flask(
 )
 app.secret_key = os.getenv("FLASK_SECRET_KEY", "dev-secret-key")
 
-
 USERS = {
     "analyst": {
-        "password": "analyst123",
+        "password": os.getenv("ANALYST_PASSWORD"),
         "role": "analyst",
     },
     "manager": {
-        "password": "manager123",
+        "password": os.getenv("MANAGER_PASSWORD"),
         "role": "manager",
     },
 }
